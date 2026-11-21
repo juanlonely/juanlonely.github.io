@@ -1,368 +1,126 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Analisis Perbandingan Penerapan Internet of Things pada Sistem Monitoring dan Otomatisasi Menggunakan Metode Systematic Literature Review</title>
-
+  <title>Analisis Perbandingan Penerapan Internet of Things pada Sistem Monitoring dan Otomatisasi: Systematic Literature Review</title>
   <link rel="canonical" href="https://juanlonely.github.io/">
 
-  <!-- Google Scholar Metadata -->
-  <meta name="citation_title" content="Analisis Perbandingan Penerapan Internet of Things pada Sistem Monitoring dan Otomatisasi Menggunakan Metode Systematic Literature Review">
-
+  <!-- Google Scholar metadata -->
+  <meta name="citation_title" content="Analisis Perbandingan Penerapan Internet of Things pada Sistem Monitoring dan Otomatisasi: Systematic Literature Review">
   <meta name="citation_author" content="Alvira Juan Alghifari">
   <meta name="citation_author" content="Tata Sutabri">
-
-  <meta name="citation_publication_date" content="2026/11/09">
-
+  <meta name="citation_doi" content="10.5281/zenodo.24315033">
+  <meta name="citation_firstpage" content="1">
+  <meta name="citation_lastpage" content="7">
+  <meta name="citation_language" content="id">
   <meta name="citation_pdf_url" content="https://juanlonely.github.io/Artikel_IoT_SLR.pdf">
-
   <meta name="citation_abstract_html_url" content="https://juanlonely.github.io/">
-
-  <meta name="citation_language" content="en">
-  <meta name="citation_keywords" content="Internet of Things, Monitoring System, Automation, Systematic Literature Review, ESP32">
-
-  <meta name="description" content="A comparative analysis of Internet of Things implementation in monitoring and automation systems using the Systematic Literature Review method.">
-
-  <meta name="robots" content="index, follow">
+  <meta name="citation_keywords" content="Internet of Things; monitoring system; automation; systematic literature review; ESP32">
+  <meta name="description" content="Systematic literature review comparing Internet of Things implementations in monitoring and automation systems, based on an audit of 15 primary studies published between 2024 and 2026.">
+  <meta name="robots" content="index,follow">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Analisis Perbandingan Penerapan Internet of Things">
+  <meta property="og:title" content="Analisis Perbandingan Penerapan Internet of Things pada Sistem Monitoring dan Otomatisasi: Systematic Literature Review">
   <meta property="og:url" content="https://juanlonely.github.io/">
-  <meta property="og:description" content="Research article on IoT monitoring and automation systems using Systematic Literature Review.">
+  <meta property="og:description" content="Artikel kajian sistematis mengenai perbandingan penerapan IoT pada sistem monitoring dan otomatisasi.">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
-      margin: 0;
-      background: #f4f6fa;
-      color: #253247;
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
+      margin: 0; background: #f4f6fa; color: #253247;
+      font-family: Arial, sans-serif; line-height: 1.75;
     }
-
-    header {
-      background: #142b4a;
-      color: white;
-      padding: 35px 20px;
-    }
-
-    .container {
-      max-width: 950px;
-      margin: auto;
-      padding: 0 20px;
-    }
-
-    .brand {
-      font-size: 14px;
-      letter-spacing: 1px;
-      color: #b9cbe2;
-      font-weight: bold;
-    }
-
-    main {
-      margin: 35px auto;
-    }
-
+    header { background: #142b4a; color: white; padding: 32px 20px; }
+    .container { max-width: 950px; margin: auto; padding: 0 20px; }
+    .brand { font-size: 14px; letter-spacing: 1px; color: #b9cbe2; font-weight: bold; }
+    main { margin: 32px auto; }
     .paper {
-      background: white;
-      padding: 38px;
-      border-radius: 12px;
+      background: white; padding: 36px; border-radius: 12px;
       box-shadow: 0 5px 25px rgba(0,0,0,.05);
     }
-
-    h1 {
-      font-size: 27px;
-      line-height: 1.5;
-      color: #142b4a;
-      margin-top: 18px;
-    }
-
-    h2 {
-      font-size: 21px;
-      color: #142b4a;
-      margin-top: 32px;
-      border-bottom: 1px solid #e5eaf0;
-      padding-bottom: 8px;
-    }
-
-    .authors {
-      color: #385b85;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
+    h1 { font-size: 27px; line-height: 1.45; color: #142b4a; margin-top: 18px; }
+    h2 { font-size: 21px; color: #142b4a; margin-top: 30px; border-bottom: 1px solid #e5eaf0; padding-bottom: 7px; }
+    .authors { color: #385b85; font-weight: bold; font-size: 16px; }
     .tag {
-      display: inline-block;
-      background: #eaf1fa;
-      color: #24558b;
-      padding: 5px 13px;
-      border-radius: 20px;
-      font-size: 12px;
+      display: inline-block; background: #eaf1fa; color: #24558b;
+      padding: 5px 13px; border-radius: 20px; font-size: 12px;
     }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 25px 0;
-    }
-
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
     .button {
-      display: inline-block;
-      padding: 11px 19px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      background: #174c85;
-      color: white;
+      display: inline-block; padding: 11px 18px; border-radius: 7px;
+      text-decoration: none; font-weight: bold; background: #174c85; color: white;
     }
-
-    .button.secondary {
-      background: #eaf1fa;
-      color: #174c85;
-    }
-
-    .abstract {
-      text-align: justify;
-    }
-
-    .details {
-      background: #f5f7fa;
-      padding: 18px;
-      border-radius: 8px;
-      overflow-wrap: anywhere;
-    }
-
-    .keywords {
-      color: #40536c;
-    }
-
-    footer {
-      text-align: center;
-      color: #778397;
-      padding: 25px;
-      font-size: 13px;
-    }
-
-    a {
-      overflow-wrap: anywhere;
-    }
-
+    .button.secondary { background: #eaf1fa; color: #174c85; }
+    .abstract { text-align: justify; }
+    .details { background: #f5f7fa; padding: 18px; border-radius: 8px; overflow-wrap: anywhere; }
+    .keywords { color: #40536c; }
+    footer { text-align: center; color: #778397; padding: 25px; font-size: 13px; }
+    a { overflow-wrap: anywhere; }
     @media (max-width: 600px) {
-      .paper {
-        padding: 22px;
-      }
-
-      h1 {
-        font-size: 22px;
-      }
-
-      h2 {
-        font-size: 19px;
-      }
+      .paper { padding: 22px; }
+      h1 { font-size: 22px; }
+      h2 { font-size: 19px; }
     }
   </style>
 </head>
-
 <body>
-
 <header>
   <div class="container">
     <div class="brand">PERSONAL ACADEMIC PUBLICATION</div>
-    <p>Scientific Research & Publications</p>
+    <p>Research Article Repository</p>
   </div>
 </header>
 
 <main class="container">
-
   <article class="paper">
+    <span class="tag">RESEARCH ARTICLE · INTERNET OF THINGS · SYSTEMATIC LITERATURE REVIEW</span>
 
-    <span class="tag">SCIENTIFIC ARTICLE · INTERNET OF THINGS</span>
+    <h1>Analisis Perbandingan Penerapan Internet of Things pada Sistem Monitoring dan Otomatisasi: Systematic Literature Review</h1>
 
-    <h1>
-      Analisis Perbandingan Penerapan Internet of Things
-      pada Sistem Monitoring dan Otomatisasi Menggunakan
-      Metode Systematic Literature Review
-    </h1>
-
-    <p class="authors">
-      Alvira Juan Alghifari · Tata Sutabri
-    </p>
+    <p class="authors">Alvira Juan Alghifari¹* · Dr. Tata Sutabri²</p>
+    <p>¹Program Studi Teknik Informatika, Institut Teknologi Indonesia<br>
+       ²Program Studi Sistem Informasi, Universitas Respati Indonesia</p>
 
     <div class="buttons">
-
-      <a class="button"
-         href="https://juanlonely.github.io/Artikel_IoT_SLR.pdf"
-         target="_blank"
-         rel="noopener">
-        Read Full Article (PDF)
-      </a>
-
-      <a class="button secondary"
-         href="https://doi.org/10.5281/zenodo.24090118"
-         target="_blank"
-         rel="noopener">
-        DOI / Zenodo
-      </a>
-
+      <a class="button" href="https://juanlonely.github.io/Artikel_IoT_SLR.pdf" target="_blank" rel="noopener">Baca Artikel Lengkap (PDF)</a>
+      <a class="button secondary" href="https://www.researchgate.net/publication/418001152_ANALISIS_PERBANDINGAN_PENERAPAN_INTERNET_OF_THINGS_PADA_SISTEM_MONITORING_DAN_OTOMATISASI_SYSTEMATIC_LITERATURE_REVIEW" target="_blank" rel="noopener">ResearchGate</a>
+      <a class="button secondary" href="https://doi.org/10.5281/zenodo.24315033" target="_blank" rel="noopener">DOI / Zenodo</a>
     </div>
 
     <h2>Abstract</h2>
-
     <p class="abstract">
-      The Internet of Things (IoT) is a technology that enables
-      devices to acquire, transmit, and process data through an
-      internet-connected network. It is widely applied in
-      monitoring systems to obtain real-time information about
-      the condition of an object, as well as in automation
-      systems to trigger actions based on detected conditions.
-      This study aims to analyze and compare the application of
-      IoT in monitoring and automation systems based on existing
-      research. A Systematic Literature Review (SLR) was
-      conducted, examining 15 primary research articles that
-      discuss IoT implementation across various sectors
-      including agriculture, hydroponics, smart home,
-      environment, safety, infrastructure, smart parking,
-      logistics, and industrial systems. The data analyzed
-      encompass research subjects, microcontrollers, sensors,
-      communication platforms, monitoring and automation
-      functions, and empirical testing outcomes. The analysis
-      reveals that IoT-based monitoring systems primarily
-      focus on the collection and presentation of real-time
-      data via web-based platforms, mobile apps, or cloud
-      services. In contrast, automation systems utilize sensor
-      data as a basis for decision-making to activate actuators
-      or execute automated actions. A comparison indicates
-      that automation systems involve more complex operational
-      stages—incorporating sensors, decision-making algorithms,
-      and actuators—whereas monitoring systems focus more on
-      data acquisition, transmission, and visualization.
-      The findings demonstrate that IoT can be applied to a
-      wide range of domains, with device characteristics and
-      control mechanisms tailored to specific operational
-      requirements.
+      This study analyzed and compared Internet of Things (IoT) implementations for monitoring and automation through a systematic literature review. Fifteen primary studies published between 2024 and 2026 were examined using an evidence-extraction matrix covering the application domain, microcontroller, sensors, communication or platform, actuator and decision logic, testing design, and reported outcomes. The sources covered agriculture, hydroponics, smart homes, water and air quality, waste, parking, flood protection, logistics, electrical infrastructure, gas safety, and industrial motor control. The synthesis showed that monitoring systems primarily acquired, transmitted, and visualized physical data, whereas automation systems added decision rules and actuators. ESP32 appeared in 14 of the 15 primary studies; one study used an ESP8266-based board. However, the results were not directly comparable because the studies used different sensors, thresholds, sample sizes, test scenarios, and performance metrics. Several reported figures required qualification: functional success in a limited number of scenarios was not treated as sensor accuracy, carbon dioxide monitoring was not supported in one air-quality study, and unreported values were marked NR. The review concluded that IoT monitoring and automation shared a sensing-connectivity foundation, but evidence strength depended on transparent reporting and validation of the complete actuator loop.
     </p>
-
-    <p class="keywords">
-      <strong>Keywords:</strong>
-      Internet of Things (IoT), Monitoring System, Automation,
-      Systematic Literature Review, ESP32.
-    </p>
+    <p class="keywords"><strong>Keywords:</strong> Internet of Things, monitoring system, automation, systematic literature review, ESP32.</p>
 
     <h2>Abstrak</h2>
-
     <p class="abstract" lang="id">
-      Internet of Things (IoT) merupakan teknologi yang
-      memungkinkan perangkat memperoleh, mengirimkan, dan
-      mengolah data secara terhubung melalui jaringan internet.
-      Penerapannya banyak digunakan pada sistem monitoring
-      untuk memperoleh informasi kondisi suatu objek secara
-      real-time serta pada sistem otomatisasi untuk memberikan
-      tindakan berdasarkan kondisi yang terdeteksi. Penelitian
-      ini bertujuan untuk menganalisis dan membandingkan
-      penerapan IoT pada sistem monitoring dan otomatisasi
-      berdasarkan penelitian yang telah dilakukan. Metode
-      yang digunakan adalah Systematic Literature Review (SLR)
-      dengan menganalisis 15 artikel penelitian primer yang
-      membahas implementasi IoT pada berbagai bidang, seperti
-      pertanian, hidroponik, rumah tangga, lingkungan,
-      keselamatan, infrastruktur, parkir pintar, logistik,
-      dan sistem industri. Data yang dianalisis meliputi
-      objek penelitian, mikrokontroler, sensor, platform
-      komunikasi atau monitoring, fungsi monitoring, fungsi
-      otomatisasi, serta hasil pengujian empiris. Hasil
-      analisis menunjukkan bahwa penerapan IoT pada sistem
-      monitoring umumnya berfokus pada pengumpulan dan
-      penyajian data secara real-time melalui platform
-      berbasis web, aplikasi, atau cloud. Sementara itu,
-      sistem otomatisasi menggunakan data sensor sebagai
-      dasar pengambilan keputusan untuk mengaktifkan aktuator
-      atau memberikan tindakan secara otomatis. Perbandingan
-      penelitian menunjukkan bahwa sistem otomatisasi
-      memiliki tahapan kerja yang lebih kompleks karena
-      melibatkan sensor, proses pengambilan keputusan, dan
-      aktuator, sedangkan sistem monitoring lebih
-      menitikberatkan pada akuisisi, pengiriman, dan
-      penyajian data. Hasil kajian menunjukkan bahwa IoT
-      dapat diterapkan pada berbagai objek dengan
-      karakteristik perangkat dan mekanisme pengendalian
-      yang berbeda sesuai kebutuhan sistem.
+      Penelitian ini menganalisis dan membandingkan penerapan Internet of Things (IoT) pada sistem monitoring dan otomatisasi melalui systematic literature review. Sebanyak 15 penelitian primer yang terbit pada 2024–2026 dikaji menggunakan matriks ekstraksi yang mencakup domain aplikasi, mikrokontroler, sensor, komunikasi atau platform, aktuator dan logika keputusan, rancangan pengujian, serta hasil yang dilaporkan. Sumber yang dikaji meliputi pertanian, hidroponik, rumah pintar, kualitas air dan udara, persampahan, parkir, pengendalian banjir, logistik, infrastruktur kelistrikan, keselamatan gas, dan kendali motor industri. Sintesis menunjukkan bahwa sistem monitoring terutama mengakuisisi, mengirimkan, dan memvisualisasikan data fisik, sedangkan sistem otomatisasi menambahkan aturan keputusan dan aktuator. ESP32 digunakan pada 14 dari 15 studi primer dan satu studi menggunakan papan berbasis ESP8266. Perbandingan langsung tidak dilakukan karena sensor, ambang, jumlah sampel, skenario uji, dan metrik kinerja berbeda. Sejumlah angka juga harus diberi batasan: keberhasilan fungsi pada skenario terbatas tidak diperlakukan sebagai akurasi sensor, klaim pengukuran karbon dioksida pada salah satu studi kualitas udara tidak didukung perangkat yang dilaporkan, dan data yang tidak tersedia ditulis NR. Kajian menyimpulkan bahwa monitoring dan otomatisasi IoT memiliki fondasi sensing-konektivitas yang sama, tetapi kekuatan buktinya bergantung pada transparansi pelaporan dan validasi loop aktuator secara utuh.
     </p>
+    <p class="keywords" lang="id"><strong>Kata kunci:</strong> Internet of Things, sistem monitoring, otomatisasi, systematic literature review, ESP32.</p>
 
-    <p class="keywords" lang="id">
-      <strong>Kata Kunci:</strong>
-      Internet of Things, Monitoring, Otomatisasi, ESP32,
-      Systematic Literature Review.
-    </p>
-
-    <h2>Publication Information</h2>
-
+    <h2>Informasi Artikel</h2>
     <div class="details">
-
-      <p>
-        <strong>Authors:</strong>
-        Alvira Juan Alghifari and Tata Sutabri
-      </p>
-
-      <p>
-        <strong>Publication Year:</strong> 2026
-      </p>
-
-      <p>
-        <strong>Research Method:</strong>
-        Systematic Literature Review (SLR)
-      </p>
-
-      <p>
-        <strong>Research Topic:</strong>
-        Internet of Things, Monitoring, Automation
-      </p>
-
-      <p>
-        <strong>Primary Research Articles:</strong> 15
-      </p>
-
-      <p>
-        <strong>Repository:</strong> Zenodo
-      </p>
-
-      <p>
-        <strong>DOI:</strong>
-        <a href="https://doi.org/10.5281/zenodo.24090118">
-          10.5281/zenodo.24090118
-        </a>
-      </p>
-
+      <p><strong>Penulis:</strong> Alvira Juan Alghifari; Dr. Tata Sutabri</p>
+      <p><strong>Afiliasi:</strong> Program Studi Teknik Informatika, Institut Teknologi Indonesia; Program Studi Sistem Informasi, Universitas Respati Indonesia</p>
+      <p><strong>Metode:</strong> Systematic Literature Review (SLR)</p>
+      <p><strong>Korpus penelitian primer:</strong> 15 artikel (2024–2026)</p>
+      <p><strong>Jumlah halaman:</strong> 7</p>
+      <p><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.24315033">10.5281/zenodo.24315033</a></p>
     </div>
 
-    <h2>Full Text Article</h2>
-
-    <p>
-      The complete research article is available in PDF format.
-      Readers can access the full text using the link below.
-    </p>
-
-    <p>
-      <a href="https://zenodo.org/records/24090118"
-         target="_blank"
-         rel="noopener">
-        View Official Publication Record on Zenodo
-      </a>
-    </p>
-
+    <h2>Akses Naskah</h2>
+    <p>Naskah lengkap tersedia melalui tautan PDF dan halaman repositori berikut:</p>
+    <ul>
+      <li><a href="https://juanlonely.github.io/Artikel_IoT_SLR.pdf">PDF artikel lengkap</a></li>
+      <li><a href="https://www.researchgate.net/publication/418001152_ANALISIS_PERBANDINGAN_PENERAPAN_INTERNET_OF_THINGS_PADA_SISTEM_MONITORING_DAN_OTOMATISASI_SYSTEMATIC_LITERATURE_REVIEW">Halaman artikel di ResearchGate</a></li>
+      <li><a href="https://zenodo.org/records/24315033">Record versi terbaru di Zenodo</a></li>
+    </ul>
   </article>
-
 </main>
 
-<footer>
-  © 2026 Personal Academic Publication · GitHub Pages
-</footer>
-
+<footer>© 2026 · Personal Academic Publication · GitHub Pages</footer>
 </body>
 </html>
